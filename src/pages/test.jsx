@@ -7,7 +7,7 @@ import "./style/test.css";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { Box, Button, Paper, Typography, Divider, Grid, Avatar } from "@mui/material";
-import VerifiedIcon from "@mui/icons-material/Verified";
+// import VerifiedIcon from "@mui/icons-material/Verified";
 
 /* ================= STAT CARD ================= */
 const StatCard = ({ title, value }) => (
@@ -155,7 +155,7 @@ function Test() {
             <Box>
               <Typography variant="h4" sx={{ color: "#2e7d32" }}>
                 {selectedExpert.name}{" "}
-                <VerifiedIcon color="success" sx={{ verticalAlign: "middle" }} />
+                {/* <VerifiedIcon color="success" sx={{ verticalAlign: "middle" }} /> */}
               </Typography>
               <Typography color="success.main" sx={{ fontWeight: "bold" }}>
                 {selectedExpert.expertise}
@@ -235,9 +235,9 @@ function Test() {
                 onClick={() => setSelectedExpert(e)}
               >
                 <img src={e.img} alt={e.name} />
-                <div>
+                <div className="featured-text">
                   <strong>{e.name}</strong>
-                  <small>{e.skill}</small>
+                  <span>{e.skill}</span>
                 </div>
               </div>
             ))}
