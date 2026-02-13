@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-pymango
-python-multipart
-pydantic
-python-dotenv
